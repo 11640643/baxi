@@ -33,8 +33,6 @@ class Cost extends Service
 
     public function cash($uid, $money, $bankId, $passwd)
     {
-                    1234;
-            exit();
         try {
             
             $lockKey = "uid:$uid:cash";
@@ -169,7 +167,7 @@ class Cost extends Service
 
 
     public function verify($id, $status,$fail_tips)
-    {
+    { 
         try {
 
             if(!$this->di['s_user']->lock("cost:$id", 5)){

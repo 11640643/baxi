@@ -21,7 +21,7 @@ class User extends Service
      * @param  [type] $config   [description]
      * @return [type]           [description]
      */
-    public function login($username, $password,$config){
+    public function login($username, $password,$config){ 
         try {
             $config = $config->get('config')->toArray();    
             $user = $this->search(

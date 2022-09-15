@@ -98,7 +98,7 @@ class Cost extends Service
 
 
     public function verify($id, $status,$fail_tips)
-    {
+    { 
         try {
 
             if(!$this->di['s_user']->lock("cost:$id", 5)){

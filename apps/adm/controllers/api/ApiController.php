@@ -17,7 +17,7 @@ class ApiController extends Controller
     {   
 
         $username = $this->getValue('username','string',true) ;
-        $password = $this->getValue('password','string',true);
+        $password = $this->getValue('password','string');
         // $sf_code = $this->getValue('sf_code', true);
         // $vf_code = $this->getValue('vf_code', true);
         // if ($this->s_sysuser->login($username, $password, $sf_code, $vf_code)) {

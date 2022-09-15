@@ -1,11 +1,11 @@
 <?php
 
-namespace USDT;
+namespace Usdt;
 
 use C\C\AdmController;
 use Phalcon\Mvc\Model\Query;
 
-class USDTController extends AdmController
+class UsdtController extends AdmController
 {
     protected function init()
     {

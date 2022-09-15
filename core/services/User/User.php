@@ -111,7 +111,6 @@ class User extends Service
                 throw new  \Exception($this->translate['new_lang_has_been_disabled']);
             }
             if (md5($passwd . $user['salt']) !== $user['passwd']) {
-                    //echo 100;exit;
                 throw new  \Exception($this->translate['new_lang_pd_error']);
                   
             }   
