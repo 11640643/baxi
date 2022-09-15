@@ -98,18 +98,24 @@ class CostController extends AdmController
         $status = $this->getValue('status', true, 'string');
         $id = $this->getValue('id', true, 'int');
 	    $fail_tips = $this->getValue('fail_tips',false,'string');
-        if($status == 'Y'){
-            $cost = $this->s_cost->search($id);
-            $res = $this->bpayTransfer(json_decode($cost['orderJson'], true));
-            if($res['code'] == 200){
-                $this->success();
-            }
-        } else {
-            if($this->s_cost->verify($id, $status,$fail_tips)){
-                $this->success();
-            }
+	    $fail_tips = $this->getValue('fail_tips',false,'string');
+        if($this->s_cost->verify($id, $status,$fail_tips)){
+            $this->success();
         }
+
         $this->error();
+        // if($status == 'Y'){
+        //     $cost = $this->s_cost->search($id);
+        //     $res = $this->bpayTransfer(json_decode($cost['orderJson'], true));
+        //     if($res['code'] == 200){
+        //         $this->success();
+        //     }
+        // } else {
+        //     if($this->s_cost->verify($id, $status,$fail_tips)){
+        //         $this->success();
+        //     }
+        // }
+        // $this->error();
     }
     
     // 代付
